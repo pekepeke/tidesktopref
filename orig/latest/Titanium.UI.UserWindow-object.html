@@ -1,0 +1,895 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.UI.UserWindow (version 1.1)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fdesktop%2Flatest%2FTitanium.UI.UserWindow-object.html">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				
+<h1 class="namespace">Titanium.UI.UserWindow</h1>
+<div class="namespace_type">object</div>
+
+<div class="since">0.2.0</div>
+
+<div class="platforms">
+</div>
+
+
+<div class="description">
+An object representing a top-level Titanium window.
+</div>
+
+<h3>Methods</h3>
+<table>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.close-method.html">close</a>
+		</td>
+		<td class="description">Closes a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.createWindow-method.html">createWindow</a>
+		</td>
+		<td class="description">Creates a new window as a child of the current window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.focus-method.html">focus</a>
+		</td>
+		<td class="description">Focuses a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getBounds-method.html">getBounds</a>
+		</td>
+		<td class="description">Return this window's bounds object. A bounds object is a simple JavaScript object
+containing four properties <tt>x</tt>, <tt>y</tt>, <tt>width<tt>, and <tt>height</tt>
+which correspond to the window geometry on the screen in pixels.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getChildren-method.html">getChildren</a>
+		</td>
+		<td class="description">Get all children of this UI.UserWindow. All windows open
+from the context of this window are considered children.
+When a window is closed all of its children will also
+be closed automatically.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getContextMenu-method.html">getContextMenu</a>
+		</td>
+		<td class="description">Return the context menu set on this UI.Userwindow or null if none is set.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getDOMWindow-method.html">getDOMWindow</a>
+		</td>
+		<td class="description">Return the WebKit DOMWindow of the page loaded in this window if
+one exists, otherwise return null. A DOMWindow object will not
+be available until a UI.UserWindow's PAGE_INITIALIZED event has
+fired.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getHeight-method.html">getHeight</a>
+		</td>
+		<td class="description">Return this window's height in pixels.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getID-method.html">getID</a>
+		</td>
+		<td class="description">Return this window's configuration id.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getIcon-method.html">getIcon</a>
+		</td>
+		<td class="description">Return this window's icon, if one is set or null</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getMaxHeight-method.html">getMaxHeight</a>
+		</td>
+		<td class="description">Return this window's maximum height.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getMaxWidth-method.html">getMaxWidth</a>
+		</td>
+		<td class="description">Return this window's maximum height in pixels.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getMenu-method.html">getMenu</a>
+		</td>
+		<td class="description">Return the window menu set on this UI.UserWindow if one is set, otherwise return null.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getMinHeight-method.html">getMinHeight</a>
+		</td>
+		<td class="description">Return this window's minimum height.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getMinWidth-method.html">getMinWidth</a>
+		</td>
+		<td class="description">Return this window's minimum width.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getParent-method.html">getParent</a>
+		</td>
+		<td class="description">Return this window's parent window or null if it is a top-level window.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getTitle-method.html">getTitle</a>
+		</td>
+		<td class="description">Return the title of this window.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getTransparency-method.html">getTransparency</a>
+		</td>
+		<td class="description">Return this window's opacity.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getURL-method.html">getURL</a>
+		</td>
+		<td class="description">Return this window's current URL."</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getWidth-method.html">getWidth</a>
+		</td>
+		<td class="description">Return this window's width in pixels.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getX-method.html">getX</a>
+		</td>
+		<td class="description">Return a UI.UserWindow's horizontal (X-axis) position on the screen. The
+origin of the screen is considered to be the top-left on all platforms.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.getY-method.html">getY</a>
+		</td>
+		<td class="description">Return a UI.UserWindow's vertical (Y-axis) position on the screen. The
+origin of the screen is considered to be the top-left on all platforms.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.hasTransparentBackground-method.html">hasTransparentBackground</a>
+		</td>
+		<td class="description">Checks whether a window has a transparent background or not. If a window has a transparent background, transparent colors on the page will show through to windows underneath.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.hide-method.html">hide</a>
+		</td>
+		<td class="description">Hides a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isActive-method.html">isActive</a>
+		</td>
+		<td class="description">Return true if this window is active. An active window is one
+that has finished opening, but has not yet been closed.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isCloseable-method.html">isCloseable</a>
+		</td>
+		<td class="description">Checks whether a window could be closed or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isDocumentEdited-method.html">isDocumentEdited</a>
+		</td>
+		<td class="description">Checks whether a window is in an edited state</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isFullscreen-method.html">isFullscreen</a>
+		</td>
+		<td class="description">Checks whether a window is in fullscreen</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isMaximizable-method.html">isMaximizable</a>
+		</td>
+		<td class="description">Checks whether a window could be maximized or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isMaximized-method.html">isMaximized</a>
+		</td>
+		<td class="description">Checks whether a window is maximized</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isMinimizable-method.html">isMinimizable</a>
+		</td>
+		<td class="description">Checks whether a window could be minimized or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isMinimized-method.html">isMinimized</a>
+		</td>
+		<td class="description">Checks whether a window is minimized</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isResizable-method.html">isResizable</a>
+		</td>
+		<td class="description">Checks whether a window is resizable</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isTopMost-method.html">isTopMost</a>
+		</td>
+		<td class="description">Checks whether a window is top most</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isUsingChrome-method.html">isUsingChrome</a>
+		</td>
+		<td class="description">Checks whether a window uses system chrome</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.isVisible-method.html">isVisible</a>
+		</td>
+		<td class="description">Checks whether a window is visible</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.maximize-method.html">maximize</a>
+		</td>
+		<td class="description">Maximizes a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.minimize-method.html">minimize</a>
+		</td>
+		<td class="description">Minimizes a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.open-method.html">open</a>
+		</td>
+		<td class="description">Opens a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.openFileChooserDialog-method.html">openFileChooserDialog</a>
+		</td>
+		<td class="description">Displays the file chooser dialog</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.openFolderChooserDialog-method.html">openFolderChooserDialog</a>
+		</td>
+		<td class="description">Displays the folder chooser dialog</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.openSaveAsDialog-method.html">openSaveAsDialog</a>
+		</td>
+		<td class="description">Displays the save as file dialog.
+Available options:
+    title: string to use for dialog title
+    path: path to where the dialog should be opened at
+    types: list of file extensions that are allowed to be selected
+    multiple: if true, allow user to select more than one file [default: true]
+    defaultFile: default name to be used for saving
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setBounds-method.html">setBounds</a>
+		</td>
+		<td class="description">Set this window's bounds object. A bounds object is a simple JavaScript object
+containing four properties <tt>x</tt>, <tt>y</tt>, <tt>width<tt>, and <tt>height</tt>
+which correspond to the window geometry on the screen in pixels.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setCloseable-method.html">setCloseable</a>
+		</td>
+		<td class="description">Sets whether a window could be closed or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setContents-method.html">setContents</a>
+		</td>
+		<td class="description">Set the contents of the UserWindow, given an HTML string
+and a base URL. Relative links in the HTML will be resolved
+relatively to the base URL.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setContextMenu-method.html">setContextMenu</a>
+		</td>
+		<td class="description">Set this window's context menu</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setDocumentEdited-method.html">setDocumentEdited</a>
+		</td>
+		<td class="description">Set a window to the edited (a dot in the close button) or unedited state. OS X only.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setFullscreen-method.html">setFullscreen</a>
+		</td>
+		<td class="description">Makes a window fullscreen</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setHeight-method.html">setHeight</a>
+		</td>
+		<td class="description">Sets a window's height</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setIcon-method.html">setIcon</a>
+		</td>
+		<td class="description">Sets a window's icon</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMaxHeight-method.html">setMaxHeight</a>
+		</td>
+		<td class="description">Sets a window's max-height</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMaxWidth-method.html">setMaxWidth</a>
+		</td>
+		<td class="description">Sets a window's max-width</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMaximizable-method.html">setMaximizable</a>
+		</td>
+		<td class="description">Sets whether a window could be maximized or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMenu-method.html">setMenu</a>
+		</td>
+		<td class="description">Set this window's menu</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMinHeight-method.html">setMinHeight</a>
+		</td>
+		<td class="description">Sets a window's min height</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMinWidth-method.html">setMinWidth</a>
+		</td>
+		<td class="description">Sets a window's min-width</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setMinimizable-method.html">setMinimizable</a>
+		</td>
+		<td class="description">Sets whether a window could be maximized or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setPluginsEnabled-method.html">setPluginsEnabled</a>
+		</td>
+		<td class="description">Set if plugins are enabled</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setResizable-method.html">setResizable</a>
+		</td>
+		<td class="description">Sets whether a window could be resized or not</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setTitle-method.html">setTitle</a>
+		</td>
+		<td class="description">Sets the title of a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setTopMost-method.html">setTopMost</a>
+		</td>
+		<td class="description">Sets whether a window is top most (above other windows)</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setTransparency-method.html">setTransparency</a>
+		</td>
+		<td class="description">Sets a window's transparency value</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setURL-method.html">setURL</a>
+		</td>
+		<td class="description">Sets the url for a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setUsingChrome-method.html">setUsingChrome</a>
+		</td>
+		<td class="description">Sets whether a window should use system chrome</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setVisible-method.html">setVisible</a>
+		</td>
+		<td class="description">Sets the visibility of the window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setWidth-method.html">setWidth</a>
+		</td>
+		<td class="description">Sets a window's width</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setX-method.html">setX</a>
+		</td>
+		<td class="description">Set a UI.UserWindow's horizontal (X-axis) position on the screen. The
+origin of the screen is considered to be the top-left on all platforms.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.setY-method.html">setY</a>
+		</td>
+		<td class="description">Set a UI.UserWindow's vertical (Y-axis) position on the screen. The
+origin of the screen is considered to be the top-left on all platforms.
+</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.show-method.html">show</a>
+		</td>
+		<td class="description">Shows a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.showInspector-method.html">showInspector</a>
+		</td>
+		<td class="description">Show a UI.UserWindow's web inspector.</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.unfocus-method.html">unfocus</a>
+		</td>
+		<td class="description">Unfocuses a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.unmaximize-method.html">unmaximize</a>
+		</td>
+		<td class="description">Unmaximizes a window</td>
+	</tr>
+	<tr>
+		<td class="name">
+			<a href="../latest/Titanium.UI.UserWindow.unminimize-method.html">unminimize</a>
+		</td>
+		<td class="description">Unminimizes a window</td>
+	</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.UserWindow.isDialog-property.html">isDialog</a></td>
+	<td class="type">Boolean</td>
+	<td class="description">true if this window is a UI Dialog</td>
+</tr>
+</table>
+
+
+
+
+			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Desktop API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/desktop/1.1">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Codec-module.html">Titanium.Codec</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.JSON-module.html">Titanium.JSON</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Notification-module.html">Titanium.Notification</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Process-module.html">Titanium.Process</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>																			<div class="methods">Methods</div>
+							<ul class="methods">
+															<li class=""><a href="../latest/Titanium.UI.addTray-method.html">addTray</a></li>
+															<li class=""><a href="../latest/Titanium.UI.clearTray-method.html">clearTray</a></li>
+															<li class=""><a href="../latest/Titanium.UI.createCheckMenuItem-method.html">createCheckMenuItem</a></li>
+															<li class=""><a href="../latest/Titanium.UI.createMenu-method.html">createMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.createMenuItem-method.html">createMenuItem</a></li>
+															<li class=""><a href="../latest/Titanium.UI.createSeperatorMenuItem-method.html">createSeperatorMenuItem</a></li>
+															<li class=""><a href="../latest/Titanium.UI.createWindow-method.html">createWindow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getContextMenu-method.html">getContextMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getCurrentWindow-method.html">getCurrentWindow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getIdleTime-method.html">getIdleTime</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getMainWindow-method.html">getMainWindow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getMenu-method.html">getMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getOpenWindows-method.html">getOpenWindows</a></li>
+															<li class=""><a href="../latest/Titanium.UI.getWindows-method.html">getWindows</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setBadge-method.html">setBadge</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setBadgeImage-method.html">setBadgeImage</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setContextMenu-method.html">setContextMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setDockIcon-method.html">setDockIcon</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setDockMenu-method.html">setDockMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setIcon-method.html">setIcon</a></li>
+															<li class=""><a href="../latest/Titanium.UI.setMenu-method.html">setMenu</a></li>
+															<li class=""><a href="../latest/Titanium.UI.showDialog-method.html">showDialog</a></li>
+								
+							</ul>
+																					<div class="properties">Properties</div>
+								<ul class="properties">
+																	<li class=""><a href="../latest/Titanium.UI.CENTERED-property.html">CENTERED</a></li>
+									
+								</ul>
+														</li>
+											<li class="">
+							<a href="../latest/Titanium.UpdateManager-module.html">Titanium.UpdateManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Worker-module.html">Titanium.Worker</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>
